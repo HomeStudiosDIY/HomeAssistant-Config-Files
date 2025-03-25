@@ -1,0 +1,34 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+
+####################################################
+#                                                  #
+#                Default Config                    #
+#                                                  #
+####################################################
+
+
+group: !include groups.yaml
+# # ##alexa: !include alexa.yaml                        #for local connection only
+# cloud: !include cloud.yaml # Live Only
+sensor: !include sensor.yaml
+climate: !include climate.yaml
+# light: !include light.yaml
+# binary_sensor: !include binary_sensor.yaml
+# # ##switch: !include switch.yaml                      # Dev Only
+# template: !include template.yaml
+# mqtt: !include mqtt.yaml
+
+
+conversation:
+#intent:  !include intent.yaml
+intent_script: !include intent_script.yaml # Testing 
